@@ -1,0 +1,319 @@
+Datatypes: 
+
+In Java, Datatypes are categorized into 2 types. 
+
+1. Primitive Types : 
+
+byte, short, int, long, float, double, boolean, char
+
+ex: int a=100;   char x= 'v';
+
+
+
+public class Datatypes {
+
+	public static void main(String[] args) {
+		
+		 byte byteV = 127;
+		 short shortV = 898;
+		 int intV = 878788;
+		 long longV= 8787878787l;
+		 boolean bV = true;
+		 char chV = 'x';
+		 float fV = 878.87F;
+		 double dV = 7888888887.12D;
+		 System.out.println(byteV);
+		 System.out.println(shortV);
+		 System.out.println(intV);
+		 System.out.println(longV);
+		 System.out.println(bV);
+		 System.out.println(chV);
+		 System.out.println(fV);
+		 System.out.println(dV);
+		 
+		
+	}
+}
+
+
+Ref: https://www.google.com/search?q=java+datatypes&sca_esv=579969189&rlz=1C1CHZN_enIN1032IN1032&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjDk46v4bCCAxUixzgGHU7vCToQ_AUoAXoECAIQAw&biw=1536&bih=739&dpr=1.25#imgrc=799YmaflnJaNNM
+
+
+2. Non Primitive Types : 
+
+Any class / Interface used as a type is considered as Non Primitive Type. 
+
+ String username="abc";
+
+ Customer customer = new Customer();
+
+
+Control Statements:
+
+We can categorize control statements into 3 types. 
+
+1. Sequential : if, if-else, switch
+
+if: 
+
+  syntax:  if(test-condition){
+
+    // code
+  }
+
+  
+public class Sequential {
+
+	 public static void main(String[] args) {
+		
+		 int age=19; 
+		 
+		 if(age >= 18) {
+			 System.out.println("Eligible to Vote");
+		 }
+		 
+		 
+	}
+}
+
+
+ if(username.length() < 8) {
+			 System.out.println("Username should be atleast 8 chars");
+		 }
+
+
+usage: when we have to deal with a condition / one condition, then use if statement.
+
+
+if-else:
+
+when we have 2 conditions, then use if-else:
+
+syntax:
+
+if(test-condition)
+{
+  // code
+}
+else{
+  // code
+}
+
+
+
+public class Sequential {
+
+	 public static void main(String[] args) {
+		
+		 int age=19; 
+		 
+		 if(age >= 18) {
+			 System.out.println("Eligible to Vote");
+		 }
+		 else {
+			 System.out.println("Not Eligible to Vote");
+		 }
+		
+		 
+		 String username="kiran123"; 
+		 
+		 if(username.length() < 8) {
+			 System.out.println("Username should be atleast 8 chars");
+		 }
+		 else {
+			 System.out.println("Username accepted");
+		 }
+		 
+		 
+		 
+	}
+}
+
+
+switch:
+
+If we have more than two conditions, we can use switch case.
+
+syntax: 
+
+ switch(choice){
+
+      case case_value1:    code 
+      case case_value2:    code
+      .
+      .
+      .
+      .
+      case case_valuen:     code 
+      default:   code
+
+ }
+
+ Problem Statement: 
+
+ Create a switch case provides different seating for trains.
+
+ import java.util.Scanner;
+
+public class Sequential {
+
+	 public static void main(String[] args) {
+//		
+//		 int age=19; 
+//		 
+//		 if(age >= 18) {
+//			 System.out.println("Eligible to Vote");
+//		 }
+//		 else {
+//			 System.out.println("Not Eligible to Vote");
+//		 }
+//		
+//		 
+//		 String username="kiran123"; 
+//		 
+//		 if(username.length() < 8) {
+//			 System.out.println("Username should be atleast 8 chars");
+//		 }
+//		 else {
+//			 System.out.println("Username accepted");
+//		 }
+		 
+		 System.out.println(" 1. Second Class \n  2.Sleeper \n 3. 3A \n  4.2A \n   5.1A ");
+		 
+		 System.out.println("Enter your choice");
+		 
+		 Scanner sc= new Scanner(System.in);
+		 
+		  int choice = sc.nextInt();
+		  
+		  System.out.println("Choice" + choice);
+		  
+		  switch(choice) {
+		  
+		  case 1:  System.out.println("You chose Second class"); break;
+		  case 2:  System.out.println("You chose Sleeper");break;
+		  case 3:  System.out.println("You chose 3A");break;
+		  case 4:  System.out.println("You chose 2A");break;
+		  case 5:  System.out.println("You chose 1A");break;
+		  default: System.out.println("N/A");
+		  
+		  }
+		 
+		 
+		 
+	}
+}
+
+
+Task:
+
+Problem Statement: 
+
+Create a list of languages for the user using syso and let the user select one language from it. 
+based on the selection display the text (hardcoded). 
+
+
+2. Iterative : while, do-while , for
+
+If we want to execute some logic repeatadly with different inputs, then we can use Iterative Statements.
+
+while: 
+
+syntax: 
+
+ while(test-condition){
+
+    // code
+ }
+
+
+public class Iterative {
+
+	 public static void main(String[] args) {
+		 int initialValue = 1;
+		 while(initialValue <=10) {
+			   System.out.println(initialValue);
+			   initialValue++;
+		 }
+		 
+	}
+}
+
+Problem Statement: 
+
+ Iterate the list of usernames and display them on the console. 
+
+  String usernames[]= {"kiran","Ram","rajesh","naveen","ramesh","anil"};
+		   
+		      int index = 0; 
+		      
+		      while(index < usernames.length) {
+		    	  System.out.println(usernames[index]);
+		    	  index++;
+		      }
+
+
+Problem Statement: 
+
+Iterate list of products of a brand using while loop.
+
+
+class Product{
+	String name;
+	long price; 
+	String brand;
+}
+
+public class Iterative {
+
+	 public static void main(String[] args) {
+//		 int initialValue = 1;
+//		 while(initialValue <=10) {
+//			   System.out.println(initialValue);
+//			   initialValue++;
+//		 }
+		 
+//		   String usernames[]= {"kiran","Ram","rajesh","naveen","ramesh","anil"};
+//		   
+//		      int index = 0; 
+//		      
+//		      while(index < usernames.length) {
+//		    	  System.out.println(usernames[index]);
+//		    	  index++;
+//		      }
+		 
+		 Product product1 = new Product();
+		 product1.name="product 1";
+		 product1.price=89999;
+		 product1.brand="brand 1";
+		 Product product2 = new Product();
+		 product2.name="product 2";
+		 product2.price=899;
+		 product2.brand="brand 1";
+		 Product product3 = new Product();
+		 product3.name="product 3";
+		 product3.price=8000;
+		 product3.brand="brand 1";
+		 
+		 Product products[]= {product1, product2,product3};
+		 
+		  int index= 0; 
+		  
+		  while(index < products.length) {
+			  
+			  Product p =products[index];
+			  System.out.println(p.name+"\t"+ p.price+"\t"+ p.brand);
+			  index++;
+		  }
+		 
+		 
+	}
+}
+
+
+3. Jump: continue, return, break, goto (Task)
+
+
+
+
+

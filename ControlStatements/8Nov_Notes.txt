@@ -1,0 +1,240 @@
+Do-while loop: 
+
+syntax: 
+
+do{
+ 
+ // code
+}while(test-condition)
+
+In While, first the test condition is checked, if the condition results to true, then the block of code 
+gets executed. 
+
+In do-while, first the do block gets executed without even checking the condition, once the do-block get 
+executed, then test condition is checked, if the test condition results to true, then do-block gets executed 
+again.
+
+
+public class DoBlockDemo {
+
+	public static void main(String[] args) {
+		
+		 int i=30; 
+		 
+		 do {
+			 System.out.println(i); //30
+			 i++;
+		 }while(i <= 20);
+		 
+		
+	}
+}
+
+
+for-loop:
+
+syntax: 
+
+for(initialization; test-condition; inc / dec){
+
+}
+
+
+public class Forloop {
+
+	public static void main(String[] args) {
+		 String users[]= {"kiran","rajesh","naveen","nikhil"};
+		 
+		  for(int index = 0; index < users.length; index++) {
+			  System.out.println(users[index]);
+		  }
+		  
+		 
+	}
+}
+
+
+Jump Statements: 
+
+break: It terminates a block of code.
+
+continue: If we want to skip an iteration based on some condition, then we can use continue keyword. 
+
+
+public class Continuedemo {
+	
+	public static void main(String[] args) {
+		
+		 for(int i=1; i<10;i++) {
+			 
+			 if(i == 2 || i == 3) {
+				continue; 
+			 }
+			 System.out.println(i);
+		 }
+		
+	}
+
+}
+
+
+return: 
+
+if we want to return some value from a method, then we can use return statement.
+
+import java.util.Scanner;
+
+public class ReturnDemo {
+	
+	     public static boolean authenticate(String username, String password) {
+	    	 
+	    	 boolean returnValue = false;
+	    	 
+	    	  if(username.equals("digital") && password.equals("lync")) {
+	    		  returnValue = true;
+	    	  }
+	    	 
+	    	 return returnValue;
+	     }
+	
+	public static void main(String[] args) {
+	
+		 Scanner sc= new Scanner(System.in); 
+		 
+		 System.out.println("Enter username");
+		 String username = sc.next();
+		 
+		 System.out.println("Enter password");
+		 String password = sc.next();
+		 
+		 boolean result= ReturnDemo.authenticate(username, password);
+		 
+		  if(result) {
+			  System.out.println("login success");
+		  }
+		  else {
+			  System.out.println("login failure");
+		  }
+		 
+	}
+
+}
+
+
+Object Oriented Programming: 
+
+Object Oriented Programming is the process of representing the realtime entities into programmable objects (Encapsulation)
+to provide a real time solution for the real time problems in the form of applications. 
+
+Key Points: 
+
+* To Solve any problems using OOP, first we need to identify the objects, their properties and action. 
+
+* Find out the relationship between multiple objects and represent them using OOP features such as 
+Inheritance, Polymorphism, abstraction, encapsulation. 
+
+Problem Statement: 
+
+Implement a simple social networking system using OOP. 
+
+features:  post, comment,sendmessages 
+
+Object: User, Post, Comment, Message 
+
+
+
+class Post{
+	
+	  String description;
+	  String mediaType;
+	public Post(String description, String mediaType) {
+		super();
+		this.description = description;
+		this.mediaType = mediaType;
+	}
+	
+	void getPostDetails(){
+		System.out.println(this.description + "\t"+ this.mediaType);
+	}
+	  
+	  
+}
+
+ class User{
+	  String username; 
+	  String email;
+	  long mobile;
+	public User(String username, String email, long mobile) {
+		this.username = username;
+		this.email = email;
+		this.mobile = mobile;
+	}
+	
+	public Post addPost(String desc, String mediaType) {
+		Post post= new Post(desc, mediaType);
+		return post;
+	} 
+ }
+ 
+
+public class OOPDemo {
+
+	public static void main(String[] args) {
+		
+		  User user1 = new User("Kiran","kiran@gmail.com",9010101010L);
+		  User user2 = new User("Naveen","naveen@gmail.com",8788878787L);
+		  
+		  Post post= user1.addPost("Good Morning", "GoodMorning.gif");
+		  
+		   post.getPostDetails();
+		  
+		   
+	}
+}
+
+Inheritance:
+
+It is the process where a class extends another class to reuse the resources available. 
+
+Use: Code Reusability 
+
+keyword: extends 
+
+
+class ICICIBank{
+	String nameOfTheBank = "ICICI";
+	String ifscCode = "ICICI8788999";
+	String location = "Gachibowli";
+}
+
+class Customer extends ICICIBank{
+	
+	  String name;
+	  String customerId;
+	  long accountNumber;
+	  long accountBalance;
+	  
+	  void printCustomerDetails(){
+		   
+		   System.out.println(this.name + "\t"+ this.customerId + "\t"+ this.accountNumber + "\t"+ this.accountBalance);
+		   System.out.println(this.nameOfTheBank+"\t"+this.ifscCode+"\t"+ this.location);
+	   }
+	
+}
+
+
+public class InheritanceDemo {
+
+	 public static void main(String[] args) {
+		
+		 Customer customer = new Customer();
+		 customer.name="kiran";
+		 customer.customerId="87888ACHD";
+		 customer.accountNumber=87888897899L;
+		 customer.accountBalance =878888L;
+		 customer.printCustomerDetails();
+	
+	}
+}
+
+

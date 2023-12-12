@@ -1,0 +1,120 @@
+Variables:
+
+A variable is an identifier that refers/ stores some value / values. 
+
+syntax: 
+
+datatype variable_name = value;
+
+We can categorize variables into 3 types.
+
+1. Local Variables 
+2. Static Variables 
+3. Instance Variables 
+
+
+Local Variables:
+
+A variable which is created inside a method is known as local variable. 
+
+example:
+
+
+public class LocalVariables {
+
+	public static void m1() {
+		String name= "Digital Lync";  // Local Variable
+		System.out.println(name);
+		
+	}
+	public static void main(String[] args) {
+		  int age=21;
+		  System.out.println(age);
+		  LocalVariables.m1();
+		  String name="Hitech City"; // Local Variable
+		  System.out.println(name);
+		
+	}
+}
+
+
+Key points:
+
+1. Local Variables can be accessed only with in the method. 
+2. Local Variables must be initialized before usage because local variables does not get the default values.
+
+Task:
+
+PS: Create any 3 local variables and run them.
+
+
+Static Variables: 
+
+Any variable that is created with static keyword is known as static variable. 
+
+
+public class StaticVariables {
+	  static int counter = 1; 
+	public static void main(String[] args) {
+		System.out.println(StaticVariables.counter); // 1
+		StaticVariables.counter++; // 2
+		StaticVariables.counter++; // 3
+		StaticVariables.counter++; // 4
+		 System.out.println(StaticVariables.counter);// 4
+	}
+}
+/*
+ * 
+         counter
+  
+ * 
+ */
+
+
+Key points: 
+
+1. Static variables can be accessed in any method of that class. 
+2. Static Variable always have only copy of the value.
+
+PS: Implement simple like feature of facebook.
+
+
+public class LikesDemo {
+
+	 static int likes= 0;
+	 
+	   static void likeThePost() {
+		     LikesDemo.likes++;
+	   }
+	   static void takebackLikeFromThePost() {
+		     LikesDemo.likes--;
+	   }
+	   public static void main(String[] args) {
+		
+		
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.likeThePost();
+		 LikesDemo.takebackLikeFromThePost();
+		// LikesDemo.likes = 25;
+		 System.out.println(LikesDemo.likes);
+		 
+	}
+}
+
+
+Problem Statement: 
+
+Implement instagram like and dislike feature. 
+
+
+
+
+
+

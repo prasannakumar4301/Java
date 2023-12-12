@@ -1,0 +1,77 @@
+History of Java: 
+
+James Gosling developed java in 1990's. 
+
+Bcos of Green Project, James Gosling was unable to finish it using c++, hence he added some new concepts and 
+rewritten c++ with additional capabilities and named it as Java.
+
+
+Features: 
+
+1. Object Oriented Programming Language 
+2. Applications developed using Java are platform independent.
+3. Robustness 
+4. Security 
+5. Multi-Threaded -> Multi tasking
+6. Library on Data Structures -> Collection Framework
+
+Environment Set up: 
+
+1. Install Recent version of java 
+
+2. Install Eclipse 
+
+3. Visual Studio Code (Optional)
+
+Building Blocks of Java:
+
+
+First App in Java: 
+
+Syntax: 
+
+ class Classname{
+
+// variables 
+// methods
+
+ }
+
+
+class FirstApp{
+  static public void main(String u[]){
+       System.out.println("Hello!");
+    }
+} 
+
+
+Key Points: 
+
+1. Every file should have a class with main method. 
+
+2. The compiler's job is to check for syntaxes only.
+
+command:  javac <filename>.java 
+
+If the compilation is successful, then compiler generates .class file 
+
+3.  Java Virtual Machine is responsible for running a java class.
+
+4. JVM looks for a main method with static,public keywords along with String[] args as parameter. 
+
+public -> Visibility to JVM 
+
+static -> For JVM to call the main method without creating object. 
+
+String args[] -> taking input from the user. 
+
+class FirstApp{
+  static public void main(String args[]){
+       //System.out.println("Hello!");
+       System.out.println(Integer.parseInt(args[0]) + Integer.parseInt(args[1]));
+    }
+}
+ 
+// Data - 10
+// Class name should always starts with Uppercase 
+
